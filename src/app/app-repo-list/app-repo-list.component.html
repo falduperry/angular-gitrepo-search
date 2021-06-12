@@ -1,0 +1,45 @@
+<div *ngFor="let list of searchList.items;">
+  <div class="container">
+    <img [src]="list.owner.avatar_url" alt="avatar_url" />
+    <div class="container__text">
+      <a
+        [href]="list.html_url"
+        target="_blank"
+        style="text-decoration: none; color: #000"
+        ><h2 class="card-title mb-10">{{list.name}}</h2></a
+      >
+      <p class="mb-10">{{list.description}}</p>
+      <div class="container__text__star mb-10" *ngIf="list.license">
+        {{list.license.name}}
+      </div>
+      <div class="container__text__star mb-10" *ngIf="!list.license">
+        No license available
+      </div>
+      <div>
+        <div class="container__text__date mb-10">
+          <strong>Created date:</strong> {{list.created_at}}
+        </div>
+        <div class="container__text__date mb-10">
+          <strong>Updated date:</strong> {{list.updated_at}}
+        </div>
+      </div>
+      <div class="container__text__timing">
+        <div class="container__text__timing_time">
+          <i class="fa fa-file">
+            <span>{{list.size}}</span>
+          </i>
+        </div>
+        <div class="container__text__timing_time">
+          <i class="fa fa-eye">
+            <span>{{list.watchers_count}}</span>
+          </i>
+        </div>
+        <div class="container__text__timing_time">
+          <i class="fa fa-code-fork">
+            <span>{{list.forks_count}}</span>
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
