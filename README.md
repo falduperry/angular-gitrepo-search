@@ -12,7 +12,9 @@ Clicks Search repos	User Repositories are displayed
 **Setup/Installation requirements**
 
 •	Clone or download and unzip the repository from github, https://github.com/falduperry/angular-gitrepo-search.git 
+
 •	If you have git Use this command git clone * to clone the project.
+
 •	Run npm install and ng serve from your terminal
 
 
