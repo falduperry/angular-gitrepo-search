@@ -2,12 +2,9 @@
   <div class="container">
     <img [src]="list.owner.avatar_url" alt="avatar_url" />
     <div class="container__text">
-      <a
-        [href]="list.html_url"
-        target="_blank"
-        style="text-decoration: none; color: #000"
-        ><h2 class="card-title mb-10">{{list.name}}</h2></a
-      >
+      <a [href]="list.html_url" target="_blank" style="text-decoration: none; color: #000">
+        <h2 class="card-title mb-10">{{list.name}}</h2>
+      </a>
       <p class="mb-10">{{list.description}}</p>
       <div class="container__text__star mb-10" *ngIf="list.license">
         {{list.license.name}}

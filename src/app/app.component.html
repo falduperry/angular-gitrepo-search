@@ -7,23 +7,19 @@
         class="searchTerm"
         formControlName="search"
         placeholder="Search repositories "
-        (keypress)="initialData($event)"
       />
       <button
         type="submit"
         class="searchButton"
-        (click)="searchFromList(form.controls.search)"
         [disabled]="noInput"
       >
         <i class="fa fa-search"></i>
       </button>
     </div>
   </form>
-  <app-repo-list
-    *ngIf="searchResults"
-    [searchList]="searchResults"
-  ></app-repo-list>
+  <app-repo-list *ngIf="searchResults" [searchList]="searchResults"></app-repo-list>
   <div *ngIf="noResult">No results found.</div>
 
   <div *ngIf="isLoading">Loading...</div>
+  <div *ngIf="errorMessage" class="error">{{errorMessage}}</div>
 </div>
